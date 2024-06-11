@@ -72,7 +72,7 @@
         <script src="data/SecoursPopulaire_37.js"></script>
         <script src="data/RestosduCoeur_38.js"></script>
         <script src="data/Autresassociationspartenaires_39.js"></script>
-        <script src="data/CCASPartenaires_40.js"></script>
+        <script src="data/CCASpartenaires_40.js"></script>
         <script src="data/CroixRouge_41.js"></script>
         <script src="data/SecoursCatholique_42.js"></script>
         <script src="data/LOrdredeMalte_43.js"></script>
@@ -80,7 +80,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[43.51764435051509,3.817550980470872],[44.341319274065825,5.858265042427752]]);
+        }).fitBounds([[43.43006710850043,2.7686724391925326],[44.59527769196901,5.659684026964818]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -1015,9 +1015,6 @@
                         <td class="visible-with-data" id="sdci_2016"colspan="2"><strong>EPCI</strong><br />' + (feature.properties['sdci_2016'] !== null ? autolinker.link(feature.properties['sdci_2016'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="type"colspan="2"><strong>Numéro</strong><br />' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td class="visible-with-data" id="Gard - d_1"colspan="2"><strong>Revenu médian (en €)</strong><br />' + (feature.properties['Gard - d_1'] !== null ? autolinker.link(feature.properties['Gard - d_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -1063,9 +1060,6 @@
             var popupContent = '<table>\
                     <tr>\
                         <td class="visible-with-data" id="sdci_2016"colspan="2"><strong>EPCI</strong><br />' + (feature.properties['sdci_2016'] !== null ? autolinker.link(feature.properties['sdci_2016'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td class="visible-with-data" id="type"colspan="2"><strong>Numéro</strong><br />' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td class="visible-with-data" id="Gard - d_1"colspan="2"><strong>Revenu médian (en €)</strong><br />' + (feature.properties['Gard - d_1'] !== null ? autolinker.link(feature.properties['Gard - d_1'].toLocaleString()) : '') + '</td>\
@@ -1115,9 +1109,6 @@
                         <td class="visible-with-data" id="sdci_2016"colspan="2"><strong>EPCI</strong><br />' + (feature.properties['sdci_2016'] !== null ? autolinker.link(feature.properties['sdci_2016'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="type"colspan="2"><strong>Numéro</strong><br />' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td class="visible-with-data" id="Gard - d_1"colspan="2"><strong>Revenu médian (en €)</strong><br />' + (feature.properties['Gard - d_1'] !== null ? autolinker.link(feature.properties['Gard - d_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -1165,9 +1156,6 @@
                         <td class="visible-with-data" id="sdci_2016"colspan="2"><strong>EPCI</strong><br />' + (feature.properties['sdci_2016'] !== null ? autolinker.link(feature.properties['sdci_2016'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="type"colspan="2"><strong>Numéro</strong><br />' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td class="visible-with-data" id="Gard - d_1"colspan="2"><strong>Revenu médian (en €)</strong><br />' + (feature.properties['Gard - d_1'] !== null ? autolinker.link(feature.properties['Gard - d_1'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
@@ -1213,9 +1201,6 @@
             var popupContent = '<table>\
                     <tr>\
                         <td class="visible-with-data" id="sdci_2016"colspan="2"><strong>EPCI</strong><br />' + (feature.properties['sdci_2016'] !== null ? autolinker.link(feature.properties['sdci_2016'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td class="visible-with-data" id="type"colspan="2"><strong>Numéro</strong><br />' + (feature.properties['type'] !== null ? autolinker.link(feature.properties['type'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td class="visible-with-data" id="Gard - d_1"colspan="2"><strong>Revenu médian (en €)</strong><br />' + (feature.properties['Gard - d_1'] !== null ? autolinker.link(feature.properties['Gard - d_1'].toLocaleString()) : '') + '</td>\
@@ -2183,37 +2168,28 @@
         function pop_SecoursPopulaire_37(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td class="visible-with-data" id="Associatio"colspan="2"><strong>Associatio</strong><br />' + (feature.properties['Associatio'] !== null ? autolinker.link(feature.properties['Associatio'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Associatio"colspan="2"><strong>Association</strong><br />' + (feature.properties['Associatio'] !== null ? autolinker.link(feature.properties['Associatio'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Lieux de d"colspan="2"><strong>Lieux de d</strong><br />' + (feature.properties['Lieux de d'] !== null ? autolinker.link(feature.properties['Lieux de d'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Lieux de d"colspan="2"><strong>Distribution</strong><br />' + (feature.properties['Lieux de d'] !== null ? autolinker.link(feature.properties['Lieux de d'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td class="visible-with-data" id="Adresse"colspan="2"><strong>Adresse</strong><br />' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Full Addre"colspan="2"><strong>Full Addre</strong><br />' + (feature.properties['Full Addre'] !== null ? autolinker.link(feature.properties['Full Addre'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td class="visible-with-data" id="Latitude"colspan="2"><strong>Latitude</strong><br />' + (feature.properties['Latitude'] !== null ? autolinker.link(feature.properties['Latitude'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td class="visible-with-data" id="Longitude"colspan="2"><strong>Longitude</strong><br />' + (feature.properties['Longitude'] !== null ? autolinker.link(feature.properties['Longitude'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td class="visible-with-data" id="Horaires"colspan="2"><strong>Horaires</strong><br />' + (feature.properties['Horaires'] !== null ? autolinker.link(feature.properties['Horaires'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Type de pr"colspan="2"><strong>Type de pr</strong><br />' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Type de pr"colspan="2"><strong>Produits</strong><br />' + (feature.properties['Type de pr'] !== null ? autolinker.link(feature.properties['Type de pr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Observatio"colspan="2"><strong>Observatio</strong><br />' + (feature.properties['Observatio'] !== null ? autolinker.link(feature.properties['Observatio'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Observatio"colspan="2"><strong>Observations</strong><br />' + (feature.properties['Observatio'] !== null ? autolinker.link(feature.properties['Observatio'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td class="visible-with-data" id="Mail"colspan="2"><strong>Mail</strong><br />' + (feature.properties['Mail'] !== null ? autolinker.link(feature.properties['Mail'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Commentair"colspan="2"><strong>Commentair</strong><br />' + (feature.properties['Commentair'] !== null ? autolinker.link(feature.properties['Commentair'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Commentair"colspan="2"><strong>Commentaire</strong><br />' + (feature.properties['Commentair'] !== null ? autolinker.link(feature.properties['Commentair'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -2321,34 +2297,34 @@
         function pop_Autresassociationspartenaires_39(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Nom'] !== null ? autolinker.link(feature.properties['Nom'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Nom"colspan="2"><strong>Association</strong><br />' + (feature.properties['Nom'] !== null ? autolinker.link(feature.properties['Nom'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Adresse"colspan="2"><strong>Adresse</strong><br />' + (feature.properties['Adresse'] !== null ? autolinker.link(feature.properties['Adresse'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['CP'] !== null ? autolinker.link(feature.properties['CP'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="CP"colspan="2"><strong>CP</strong><br />' + (feature.properties['CP'] !== null ? autolinker.link(feature.properties['CP'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Ville'] !== null ? autolinker.link(feature.properties['Ville'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Ville"colspan="2"><strong>Ville</strong><br />' + (feature.properties['Ville'] !== null ? autolinker.link(feature.properties['Ville'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['produits'] !== null ? autolinker.link(feature.properties['produits'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="produits"colspan="2"><strong>produits</strong><br />' + (feature.properties['produits'] !== null ? autolinker.link(feature.properties['produits'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Tyde distr'] !== null ? autolinker.link(feature.properties['Tyde distr'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Tyde distr"colspan="2"><strong>Distribution</strong><br />' + (feature.properties['Tyde distr'] !== null ? autolinker.link(feature.properties['Tyde distr'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Telephone"colspan="2"><strong>Telephone</strong><br />' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Mail'] !== null ? autolinker.link(feature.properties['Mail'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Mail"colspan="2"><strong>Mail</strong><br />' + (feature.properties['Mail'] !== null ? autolinker.link(feature.properties['Mail'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Site'] !== null ? autolinker.link(feature.properties['Site'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Site"colspan="2"><strong>Site</strong><br />' + (feature.properties['Site'] !== null ? autolinker.link(feature.properties['Site'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Ouverture'] !== null ? autolinker.link(feature.properties['Ouverture'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Ouverture"colspan="2"><strong>Ouverture</strong><br />' + (feature.properties['Ouverture'] !== null ? autolinker.link(feature.properties['Ouverture'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -2395,7 +2371,7 @@
         });
         bounds_group.addLayer(layer_Autresassociationspartenaires_39);
         map.addLayer(layer_Autresassociationspartenaires_39);
-        function pop_CCASPartenaires_40(feature, layer) {
+        function pop_CCASpartenaires_40(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td class="visible-with-data" id="Nom"colspan="2"><strong>Association</strong><br />' + (feature.properties['Nom'] !== null ? autolinker.link(feature.properties['Nom'].toLocaleString()) : '') + '</td>\
@@ -2416,10 +2392,13 @@
                         <td class="visible-with-data" id="Telephone"colspan="2"><strong>Tel</strong><br />' + (feature.properties['Telephone'] !== null ? autolinker.link(feature.properties['Telephone'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Type de distribution/ service"colspan="2"><strong>Distribution</strong><br />' + (feature.properties['Type de distribution/ service'] !== null ? autolinker.link(feature.properties['Type de distribution/ service'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="distributi"colspan="2"><strong>Type de distribution </strong><br />' + (feature.properties['distributi'] !== null ? autolinker.link(feature.properties['distributi'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td class="visible-with-data" id="Liens utiles"colspan="2"><strong>Site</strong><br />' + (feature.properties['Liens utiles'] !== null ? autolinker.link(feature.properties['Liens utiles'].toLocaleString()) : '') + '</td>\
+                        <td class="visible-with-data" id="Liens"colspan="2"><strong>Liens</strong><br />' + (feature.properties['Liens'] !== null ? autolinker.link(feature.properties['Liens'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td class="visible-with-data" id="Commentair"colspan="2"><strong>Notes</strong><br />' + (feature.properties['Commentair'] !== null ? autolinker.link(feature.properties['Commentair'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -2429,38 +2408,38 @@
             popup.setContent(updatedContent);
         }
 
-        function style_CCASPartenaires_40_0() {
+        function style_CCASpartenaires_40_0() {
             return {
-                pane: 'pane_CCASPartenaires_40',
+                pane: 'pane_CCASpartenaires_40',
         rotationAngle: 0.0,
         rotationOrigin: 'center center',
         icon: L.icon({
-            iconUrl: 'markers/CCASPartenaires_40.svg',
+            iconUrl: 'markers/CCASpartenaires_40.svg',
             iconSize: [19.0, 19.0]
         }),
                 interactive: true,
             }
         }
-        map.createPane('pane_CCASPartenaires_40');
-        map.getPane('pane_CCASPartenaires_40').style.zIndex = 440;
-        map.getPane('pane_CCASPartenaires_40').style['mix-blend-mode'] = 'normal';
-        var layer_CCASPartenaires_40 = new L.geoJson(json_CCASPartenaires_40, {
+        map.createPane('pane_CCASpartenaires_40');
+        map.getPane('pane_CCASpartenaires_40').style.zIndex = 440;
+        map.getPane('pane_CCASpartenaires_40').style['mix-blend-mode'] = 'normal';
+        var layer_CCASpartenaires_40 = new L.geoJson(json_CCASpartenaires_40, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CCASPartenaires_40',
-            layerName: 'layer_CCASPartenaires_40',
-            pane: 'pane_CCASPartenaires_40',
-            onEachFeature: pop_CCASPartenaires_40,
+            dataVar: 'json_CCASpartenaires_40',
+            layerName: 'layer_CCASpartenaires_40',
+            pane: 'pane_CCASpartenaires_40',
+            onEachFeature: pop_CCASpartenaires_40,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.marker(latlng, style_CCASPartenaires_40_0(feature));
+                return L.marker(latlng, style_CCASpartenaires_40_0(feature));
             },
         });
-        bounds_group.addLayer(layer_CCASPartenaires_40);
-        map.addLayer(layer_CCASPartenaires_40);
+        bounds_group.addLayer(layer_CCASpartenaires_40);
+        map.addLayer(layer_CCASpartenaires_40);
         function pop_CroixRouge_41(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
@@ -2744,7 +2723,7 @@
             {label: '<img src="legend/LOrdredeMalte_43.png" /> L\'Ordre de Malte', layer: layer_LOrdredeMalte_43},
             {label: '<img src="legend/SecoursCatholique_42.png" /> Secours Catholique', layer: layer_SecoursCatholique_42},
             {label: '<img src="legend/CroixRouge_41.png" /> Croix-Rouge', layer: layer_CroixRouge_41},
-            {label: '<img src="legend/CCASPartenaires_40.png" /> CCAS (Partenaires)', layer: layer_CCASPartenaires_40},
+            {label: '<img src="legend/CCASpartenaires_40.png" /> CCAS (partenaires)', layer: layer_CCASpartenaires_40},
             {label: '<img src="legend/Autresassociationspartenaires_39.png" /> Autres associations partenaires', layer: layer_Autresassociationspartenaires_39},
             {label: '<img src="legend/RestosduCoeur_38.png" /> Restos du Coeur', layer: layer_RestosduCoeur_38},
             {label: '<img src="legend/SecoursPopulaire_37.png" /> Secours Populaire', layer: layer_SecoursPopulaire_37},
